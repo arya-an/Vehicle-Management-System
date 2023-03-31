@@ -11,3 +11,9 @@ The vehicle model has the following fields
 - Vehicle Type (options:- Two, There, Four wheelers)
 - Vehicle Model (Text)
 - Vehicle Description (Text)
+
+## About the Project
+This is a project for management of different types of vehicles.This project will have the CRUD operations for the vehicle model.This includes 3 different types of users and each type of users will different access to the vehicle management.
+- Super Admin (will have complete access to the vehicle management.Can perform create,retrieve,update and delete)
+- Admin (can perform edit and view operations)
+- User (can perform view operation)
