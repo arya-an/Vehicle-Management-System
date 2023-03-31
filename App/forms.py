@@ -14,10 +14,10 @@ class NewUserForm(UserCreationForm):
     
     class Meta:
         model = User
-        fields = ['email','username','password1','password2','is_staff']
+        fields = ['email','username','password1','password2','is_staff','is_superuser']
 
         
     def __init__(self, *args, **kwargs):
         super(NewUserForm, self).__init__(*args, **kwargs)
-        for field_name in ('email','username','password1','password2','is_staff'):
+        for field_name in ('email','username','password1','password2','is_staff','is_superuser'):
             self.fields[field_name].help_text = ''
