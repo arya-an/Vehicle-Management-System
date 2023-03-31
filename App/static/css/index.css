@@ -1,0 +1,23 @@
+.homepage{
+    width: 100%;
+    background-color: beige;
+    height: 80vh;
+}
+.titlecls h1{
+    font-style: italic;
+    font-size: 100;
+    text-align: center;
+    padding-top: 15%;
+    
+}
+.addvehicls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    
+
+}
+.listcls{
+    background-color: rgb(240, 240, 227);
+}

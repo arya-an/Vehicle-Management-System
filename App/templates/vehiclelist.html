@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    
+<a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
+    <div class="m-4 listcls" >
+        
+        
+        <div class="container">
+                     
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Vehicle Number</th>
+                  <th>Vehicle Type</th>
+                  <th>Vehicle Model</th>
+                  <th>vehicle Description</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in vlist%}
+                <tr>
+                  <td>{{ i.vehicle_number }}</td>
+                  <td>{{ i.vehicle_type }}</td>
+                  <td>{{ i.vehicle_model }}</td>
+                  <td>{{ i.vehicle_description }}</td>
+
+                  {% if request.user.is_superuser or request.user.is_staff  %}
+                  
+                  <td><a href="{% url 'vehicleedit' pk=i.id %}">Edit</a></td>
+                  
+                  {% endif %}
+
+                  {% if request.user.is_superuser %}
+
+                  <td><a href="/vehicledelete/{{ i.id }}">Delete</a></td> 
+
+                  {% endif %}
+                </tr>
+                {% endfor %}
+
+                
+         
+                
+                
+                
+                
+                
+              </tbody>
+            </table>
+          </div>
+          
+        
+    </div>
+
+{% endblock %}
